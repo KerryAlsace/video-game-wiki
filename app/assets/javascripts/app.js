@@ -2,5 +2,5 @@
   'use strict';
 
   angular
-    .module('app', ['ui.router', 'ngMessages', 'templates'])
+    .module('app', ['ui.router', 'templates'])
 }());
