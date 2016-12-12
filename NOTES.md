@@ -60,6 +60,7 @@ Initial setup:
   }
 - `npm install bower -g`
 - `rails bower:install`
+- remove turbolinks references from application.html.erb
 - edit application.js
   //= require jquery
   //= require materialize
