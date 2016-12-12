@@ -97,6 +97,7 @@ Initial setup:
 - add model relationships
 - `rails db:migrate`
 - `rails c` (check that models are set up correctly)
+- edit application_controller.rb
 
 ### Figure out Model
 
