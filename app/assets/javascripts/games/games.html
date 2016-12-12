@@ -1,17 +1,16 @@
 <h4 class='ui-header'>Games</h4>
 
-<div class='ui-list'>
-  <div class='item' ng-repeat="game in vm.games track by game.id">
-    <div class='content'>
-      <h5 class='ui block header'>{{ game.title }}</h5>
-      <div class='description'>
-        <h6 ng-if="game.studio">{{ game.publisher.name }}</h6>
-        <p ng-if="game.genre">{{ game.genre.name }}</p>
+<div class="ui items">
+  <div class="item" ng-repeat="game in vm.games track by game.id">
+    <div class="content">
+      <div class="header">{{ game.title }}</div>
+      <div class="meta">
+        <span class="publisher">{{ game.publisher.name }}</span>
+        <span class="genre">{{ game.genre.name }}</span>
+        <span class="platform" ng-repeat="platform in game.platforms">{{ platform.name }}</span>
+      </div>
+      <div class="description">
         <p>{{ game.description }}</p>
-        <p>Available on: </p>
-        <div class='ui-list'>
-          <div class='item' ng-repeat="platform in game.platforms">{{ platform.name }}</div>
-        </div>
       </div>
     </div>
   </div>
