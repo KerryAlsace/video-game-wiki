@@ -64,6 +64,9 @@ Initial setup:
    $primary-color: color("pink", "darken-4") !default;
    $secondary-color: color("yellow", "base") !default;
    @import "materialize";
+- add to gitignore:
+  # Ignore Bower components
+  /vendor/assets/bower_components
 
 
 
