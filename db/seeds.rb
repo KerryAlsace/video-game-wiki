@@ -18,10 +18,10 @@
 
 5.times do |i|
   id = i + 1
-  pb = Publisher.create(name: 'Publisher #{id}')
-  g = Genre.create(name: 'Genre #{id}')
-  pl = Platform.create(name: 'Platform #{id}')
-  gm = Game.create(title: 'Game #{id}', description: 'Description', publisher: pb, genre: g)
+  pb = Publisher.create(name: "Publisher #{id}")
+  g = Genre.create(name: "Genre #{id}")
+  pl = Platform.create(name: "Platform #{id}")
+  gm = Game.create(title: "Game #{id}", description: 'Description', publisher: pb, genre: g)
   pg = PlatformGame.create(game: gm, platform: pl)
-  r = Review.create(content: 'Game Review #{id}', game: gm)
+  r = Review.create(content: "Game Review #{id}, game: gm)
 end
