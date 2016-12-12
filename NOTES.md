@@ -63,10 +63,8 @@ Initial setup:
 - remove turbolinks references from application.html.erb
 - edit application.js
   //= require jquery
-  //= require materialize
   //= require angular
   //= require angular-ui-router
-  //= require angular-devise
   //= require angular-rails-templates
   //= require moment
   //= require_tree .
@@ -74,11 +72,6 @@ Initial setup:
    *= require_tree .
    *= require_self
    */
-
-   @import "materialize/components/color";
-   $primary-color: color("pink", "darken-4") !default;
-   $secondary-color: color("yellow", "base") !default;
-   @import "materialize";
 - add to gitignore:
   # Ignore Bower components
   /vendor/assets/bower_components
@@ -100,8 +93,16 @@ Initial setup:
 - edit application_controller.rb
 - add to routes.rb?
 - `rails g controller Games`
-- change games.coffee to games.js
+- delete games.coffee and games.scss
 - fill out games_controller.rb
+- create views/application/index.html.erb and add
+  <ui-view></ui-view>
+- create assets/javascripts/app.js
+- decide to use semantic ui instead of materialize
+- (if using materialize, you would do `bower install materialize`)
+- remove materialize gem
+- `bundle`
+- `bower install semantic-ui`
 
 ### Figure out Model
 

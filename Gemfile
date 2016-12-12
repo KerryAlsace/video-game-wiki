@@ -32,8 +32,6 @@ gem 'active_model_serializers'
 gem 'bower-rails'
 # Use Angular for front-end
 gem 'angular-rails-templates'
-# Use Materialize for styling
-gem 'materialize-sass'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
