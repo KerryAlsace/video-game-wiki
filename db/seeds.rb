@@ -15,7 +15,13 @@
 
 #<Review id: nil, content: nil, playing_solo: nil, playing_with_friends: nil, cosplay: nil, relaxing: nil, learning: nil, newbs: nil, getting_amped_up: nil, playing_while_drunk: nil, playing_while_high: nil, your_adventurer_streak: nil, your_krombopolis_michael_streak: nil, your_bob_the_builder_streak: nil, playing_to_remember: nil, playing_to_forget: nil, making_new_friends: nil, making_new_enemies: nil, created_at: nil, updated_at: nil>
 
-p = Publisher.create(name: 'Publisher 1')
-g = Genre.create(name: 'Genre 1')
-pl = Platform.create(name: 'Platform 1')
-gm = Game.create(title: 'Game 1', description: 'Description', publisher: p, genre: g)
+
+5.times do |i|
+  id = i + 1
+  pb = Publisher.create(name: 'Publisher #{id}')
+  g = Genre.create(name: 'Genre #{id}')
+  pl = Platform.create(name: 'Platform #{id}')
+  gm = Game.create(title: 'Game #{id}', description: 'Description', publisher: pb, genre: g)
+  pg = PlatformGame.create(game: gm, platform: pl)
+  r = Review.create(content: 'Game Review #{id}', game: gm)
+end

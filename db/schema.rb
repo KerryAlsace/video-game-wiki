@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20161212201446) do
 
   create_table "reviews", force: :cascade do |t|
     t.text     "content"
+    t.integer  "game_id"
     t.boolean  "playing_solo"
     t.boolean  "playing_with_friends"
     t.boolean  "cosplay"

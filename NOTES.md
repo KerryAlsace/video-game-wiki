@@ -82,7 +82,7 @@ Initial setup:
   # Ignore Bower components
   /vendor/assets/bower_components
 - `rails g model Game title:string description:text game_id:integer publisher_id:integer genre_id:integer`
-- `rails g model Review content:text playing_solo:boolean playing_with_friends:boolean cosplay:boolean relaxing:boolean learning:boolean newbs:boolean getting_amped_up:boolean playing_while_drunk:boolean playing_while_high:boolean your_adventurer_streak:boolean your_krombopolis_michael_streak:boolean your_bob_the_builder_streak:boolean playing_to_remember:boolean playing_to_forget:boolean making_new_friends:boolean making_new_enemies:boolean`
+- `rails g model Review content:text game_id:integer playing_solo:boolean playing_with_friends:boolean cosplay:boolean relaxing:boolean learning:boolean newbs:boolean getting_amped_up:boolean playing_while_drunk:boolean playing_while_high:boolean your_adventurer_streak:boolean your_krombopolis_michael_streak:boolean your_bob_the_builder_streak:boolean playing_to_remember:boolean playing_to_forget:boolean making_new_friends:boolean making_new_enemies:boolean`
 - `rails g model Publisher name:string`
 - `rails g model Genre name:string`
 - `rails g model Platform name:string`
@@ -93,6 +93,7 @@ Initial setup:
   resources :games do
     :reviews
   end
+- add model relationships
 - `rails db:migrate`
 - `rails c` (check that models are set up correctly)
 
