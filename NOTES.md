@@ -102,7 +102,13 @@ Initial setup:
 - (if using materialize, you would do `bower install materialize`)
 - remove materialize gem
 - `bundle`
-- `bower install semantic-ui`
+- `npm install -g gulp`
+- `npm install semantic-ui --save`
+- `cd semantic/`
+- `gulp build`
+- add to application.html.erb
+  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+  <script src="semantic/dist/semantic.min.js"></script>
 
 ### Figure out Model
 
