@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :publishers
-  resources :platforms
   resources :genres
+  resources :platforms
 
 end

@@ -5,33 +5,35 @@
       Video Game Wiki
     </a>
     <div ui-sref-active="active">
-      <a href="#" class="item" ui-sref="home">Home</a>
+      <a href="#" class="item" ui-sref="vm">Home</a>
     </div>
     <div class="ui simple dropdown item">
       Games <i class="dropdown icon"></i>
       <div class="menu">
         <div ui-sref-active="active">
-          <a href="#" class="item" ui-sref="home.games">All Games</a>
+          <a href="#" class="item" ui-sref="vm.games">All Games</a>
         </div>
         <div ui-sref-active="active">
-          <a href="#" class="item" ui-sref="home.newGame">Add a Game</a>
+          <a href="#" class="item" ui-sref="vm.newGame">Add a Game</a>
         </div>
       </div>
     </div>
     <div ui-sref-active="active">
-      <a href="#" class="item" ui-sref="home.publishers">Publishers</a>
+      <a href="#" class="item" ui-sref="vm.publishers">Publishers</a>
     </div>
     <div ui-sref-active="active">
-      <a href="#" class="item" ui-sref="home.genres">Genres</a>
+      <a href="#" class="item" ui-sref="vm.genres">Genres</a>
     </div>
     <div ui-sref-active="active">
-      <a href="#" class="item" ui-sref="home.platforms">Platforms</a>
+      <a href="#" class="item" ui-sref="vm.platforms">Platforms</a>
     </div>
   </div>
 </div>
 
 <div class='ui main text container'>
+  {{ vm.name }}
   <ui-view></ui-view>
+  }
 </div>
 
 <div class='ui inverted vertical footer segment'>

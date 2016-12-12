@@ -109,7 +109,9 @@ Initial setup:
 - add to application.html.erb
   <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
   <script src="semantic/dist/semantic.min.js"></script>
--
+- `bower install angular-messages`
+- add to application.html.erb
+  <script src="/bower_components/angular-messages/angular-messages.js"></script>
 
 ### Figure out Model
 
