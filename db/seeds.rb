@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+#<Game id: nil, title: nil, description: nil, publisher_id: nil, genre_id: nil, created_at: nil, updated_at: nil> 
+#<Publisher id: nil, name: nil, created_at: nil, updated_at: nil>
+#<Genre id: nil, name: nil, created_at: nil, updated_at: nil>
+#<Platform id: nil, name: nil, created_at: nil, updated_at: nil>
+#<PlatformGame id: nil, game_id: nil, platform_id: nil, created_at: nil, updated_at: nil>
+
+#<Review id: nil, content: nil, playing_solo: nil, playing_with_friends: nil, cosplay: nil, relaxing: nil, learning: nil, newbs: nil, getting_amped_up: nil, playing_while_drunk: nil, playing_while_high: nil, your_adventurer_streak: nil, your_krombopolis_michael_streak: nil, your_bob_the_builder_streak: nil, playing_to_remember: nil, playing_to_forget: nil, making_new_friends: nil, making_new_enemies: nil, created_at: nil, updated_at: nil>
+
+p = Publisher.create(name: 'Publisher 1')
+g = Genre.create(name: 'Genre 1')
+pl = Platform.create(name: 'Platform 1')
+gm = Game.create(title: 'Game 1', description: 'Description', publisher: p, genre: g)
