@@ -14,6 +14,6 @@
 //= require angular
 //= require angular-ui-router
 //= require angular-rails-templates
-//= require angular-messages
+//= require semantic_ui/semantic_ui
 //= require moment
 //= require_tree .

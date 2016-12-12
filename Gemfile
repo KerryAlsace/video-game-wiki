@@ -32,6 +32,10 @@ gem 'active_model_serializers'
 gem 'bower-rails'
 # Use Angular for front-end
 gem 'angular-rails-templates'
+# Use Semantic UI for style
+gem 'less-rails-semantic_ui'
+gem 'autoprefixer-rails'
+gem 'therubyracer'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
