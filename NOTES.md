@@ -29,6 +29,47 @@ Initial setup:
   # Use Materialize for styling
   gem 'materialize-sass'
 - `bundle install`
+- `rails g bower_rails:initialize json`
+- Edit bower.json as needed
+  (add 'name' to avoid getting errors)
+  {
+    "name": "video-game-wiki",
+    "vendor": {
+      "name": "bower-rails generated vendor assets",
+      "dependencies": {
+        "angular": "v1.5.8",
+        "angular-ui-router": "latest",
+        "angular-devise": "latest",
+        "moment": "latest"
+      }
+    }
+  }
+- `npm install bower -g`
+- `rails bower:install`
+- edit application.js
+  //= require jquery
+  //= require materialize
+  //= require angular
+  //= require angular-ui-router
+  //= require angular-devise
+  //= require angular-rails-templates
+  //= require moment
+  //= require_tree .
+- edit application.css
+   *= require_tree .
+   *= require_self
+   */
+
+   @import "materialize/components/color";
+   $primary-color: color("pink", "darken-4") !default;
+   $secondary-color: color("yellow", "base") !default;
+   @import "materialize";
+
+
+
+
+
+
 - `rails g model Game name:string genre_id:integer content:text studio_id:integer`
 - `rails g model Studio name:string description:text`
 - `rails g model Platform name:string`
@@ -42,11 +83,6 @@ Initial setup:
 - `rails db:seed`
 - create serializers
 - `rails g controller Games`
-- add bower and angular gems
-- `rails g bower_rails:initialize json`
-- Edit bower.json as needed
-- `npm install bower -g`
-- `rails bower:install`
 
 
 TODO:
