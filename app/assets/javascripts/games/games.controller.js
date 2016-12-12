@@ -19,7 +19,7 @@
     }
 
     function getGames() {
-      return GameFactory.getGames()
+      return GamesFactory.getGames()
                         .then(setGames)
     }
 
