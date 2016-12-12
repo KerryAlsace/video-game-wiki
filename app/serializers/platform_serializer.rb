@@ -1,4 +1,4 @@
-class GenreSerializer < ActiveModel::Serializer
+class PlatformSerializer < ActiveModel::Serializer
   attributes :id, :name
 
   has_many :platform_games

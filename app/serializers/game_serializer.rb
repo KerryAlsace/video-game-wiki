@@ -1,5 +1,5 @@
 class GameSerializer < ActiveModel::Serializer
-  attributes :id, :title, :content, :publisher_id, :genre_id
+  attributes :id, :title, :description, :publisher_id, :genre_id
 
   has_many :reviews
   has_one :publisher

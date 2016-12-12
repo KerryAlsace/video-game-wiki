@@ -114,6 +114,7 @@ Initial setup:
   <script src="/bower_components/angular-messages/angular-messages.js"></script>
 - give up and just remove angular messages
 - give up on semantic ui the way it is and do this: https://github.com/Semantic-Org/Semantic-UI-Rails-LESS
+- serializers
 
 
 ### Figure out Model

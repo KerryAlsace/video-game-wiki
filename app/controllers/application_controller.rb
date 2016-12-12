@@ -1,9 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  respond_to :json
 
   after_filter :set_csrf_cookie
-
-  respond_to :json
 
   def set_csrf_cookie
     if protect_against_forgery?
