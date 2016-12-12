@@ -5,4 +5,8 @@ Rails.application.routes.draw do
     :reviews
   end
 
+  resources :publishers
+  resources :platforms
+  resources :genres
+
 end

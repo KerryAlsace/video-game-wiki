@@ -98,6 +98,10 @@ Initial setup:
 - `rails db:migrate`
 - `rails c` (check that models are set up correctly)
 - edit application_controller.rb
+- add to routes.rb?
+- `rails g controller Games`
+- change games.coffee to games.js
+- fill out games_controller.rb
 
 ### Figure out Model
 
