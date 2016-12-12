@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyText
+  playing_solo: false
+  playing_with_friends: false
+  cosplay: false
+  relaxing: false
+  learning: false
+  newbs: false
+  getting_amped_up: false
+  playing_while_drunk: false
+  playing_while_high: false
+  your_adventurer_streak: false
+  your_krombopolis_michael_streak: false
+  your_bob_the_builder_streak: false
+  playing_to_remember: false
+  playing_to_forget: false
+  making_new_friends: false
+  making_new_enemies: false
+
+two:
+  content: MyText
+  playing_solo: false
+  playing_with_friends: false
+  cosplay: false
+  relaxing: false
+  learning: false
+  newbs: false
+  getting_amped_up: false
+  playing_while_drunk: false
+  playing_while_high: false
+  your_adventurer_streak: false
+  your_krombopolis_michael_streak: false
+  your_bob_the_builder_streak: false
+  playing_to_remember: false
+  playing_to_forget: false
+  making_new_friends: false
+  making_new_enemies: false

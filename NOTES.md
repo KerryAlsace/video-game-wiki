@@ -67,11 +67,103 @@ Initial setup:
 - add to gitignore:
   # Ignore Bower components
   /vendor/assets/bower_components
+- `rails g model Game title:string description:text game_id:integer publisher_id:integer genre_id:integer`
+- `rails g model Review content:text playing_solo:boolean playing_with_friends:boolean cosplay:boolean relaxing:boolean learning:boolean newbs:boolean getting_amped_up:boolean playing_while_drunk:boolean playing_while_high:boolean your_adventurer_streak:boolean your_krombopolis_michael_streak:boolean your_bob_the_builder_streak:boolean playing_to_remember:boolean playing_to_forget:boolean making_new_friends:boolean making_new_enemies:boolean`
+- `rails g model Publisher name:string`
+- `rails g model Genre name:string`
+- `rails g model Platform name:string`
+- `rails g model PlatformGames game_id:integer platform_id:integer`
+
+### Figure out Model
+
+Pull in video games, studios/companies, genres from API
+- Have a "Reviewed Games" page that shows all reviewed games
+  Those games are saved to the db
+
+  Games Model:
+    has_many :reviews
+    belongs_to :publisher
+    belongs_to :genre
+    has_many :platform_games
+    has_many :platforms, through: :platform_games
+
+    :title
+    :description
+    :publisher
+    :genre
+    :platforms
+    :reviews
+
+  Reviews Model:
+    belongs_to :game
+
+    :content
+    checkboxes:
+
+  Publisher Model:
+    has_many :games
+    has_many :ratings, through: :games
+
+    :name
+    :games
+    :average_rating (custom)
+
+  Genre Model:
+    has_many :games
+
+    :name
+
+  PlatformGames Model:
+    belongs_to :game
+    belongs_to :platform
+
+  Platform Model:
+    has_many :platform_games
+    has_many :games, through: :platform_games
+
+    :name
+
+- Reviews:
+  Checkboxes:
+    Good for:
+      playing solo
+      playing with friend(s)
+      cosplay
+      relaxing
+      learning
+      newbs
+      getting amped up
+      playing while drunk
+      playing while in Colorado, Washington, Oregon, or Maine
+      your adventurer streak
+      your Krombopolis Michael streak
+      your Bob the Builder streak
+      playing to remember (retro)
+      playing to forget
+      making new friends
+      making new enemies
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### First Draft of Model
 
 - `rails g model Game name:string genre_id:integer content:text studio_id:integer`
 - `rails g model Studio name:string description:text`

@@ -1,0 +1,2 @@
+class PlatformGame < ApplicationRecord
+end
