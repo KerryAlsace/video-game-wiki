@@ -1,0 +1,33 @@
+<form class="ui form">
+  <div class="field">
+    <label>Title</label>
+    <input type="text" name="title" placeholder="Title">
+  </div>
+  <div class="field">
+    <label>Description</label>
+    <textarea></textarea>
+  </div>
+  <div class="field">
+      <label>Publisher</label>
+      <div class="ui selection dropdown">
+          <input type="hidden" name="publisher">
+          <i class="dropdown icon"></i>
+          <div class="default text">Publisher</div>
+          <div class="menu">
+              <div ng-repeat="publisher in vm.publishers track by publisher.id" class="item" data-value="{{$index}}">{{ publisher.name }}</div>
+          </div>
+      </div>
+  </div>
+  <div class="field">
+      <label>Genre</label>
+      <div class="ui selection dropdown">
+          <input type="hidden" name="genre">
+          <i class="dropdown icon"></i>
+          <div class="default text">Genre</div>
+          <div class="menu">
+              <div ng-repeat="genre in vm.genres track by genre.id" class="item" data-value="{{$index}}">{{ genre.name }}</div>
+          </div>
+      </div>
+  </div>
+  <button class="ui button" type="submit">Submit</button>
+</form>

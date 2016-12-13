@@ -2,9 +2,9 @@
 <div class="ui divided items">
   <div class="item" ng-repeat="game in vm.games track by game.id">
     <div class="content">
-      <div class="ui block header">{{ game.title }}</div>
+      <div class="ui header">{{ game.title }}</div>
       <div class="meta">
-        <span class="publisher">{{ game.publisher.name }} | </span>
+        <span class="publisher">{{ game.publisher.name }}  | </span>
         <span class="genre">{{ game.genre.name }}</span>
       </div>
       <div class="description">

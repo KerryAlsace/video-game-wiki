@@ -5,6 +5,9 @@
 
     return {
       getGames: getGames,
+      getPublishers: getPublishers,
+      getGenres: getGenres,
+      getPlatforms: getPlatforms,
       getGame: getGame,
       createGame: createGame,
       updateGame: updateGame,
@@ -13,6 +16,24 @@
 
     function getGames() {
       return $http.get('/games')
+                  .then(handleResponse)
+                  .catch(handleError)
+    }
+
+    function getPublishers() {
+      return $http.get('/publishers')
+                  .then(handleResponse)
+                  .catch(handleError)
+    }
+
+    function getGenres() {
+      return $http.get('/genres')
+                  .then(handleResponse)
+                  .catch(handleError)
+    }
+
+    function getPlatforms() {
+      return $http.get('/platforms')
                   .then(handleResponse)
                   .catch(handleError)
     }
