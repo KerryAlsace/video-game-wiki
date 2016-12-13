@@ -5,8 +5,8 @@
     <div class="content">
       <div class="header">{{ game.title }}</div>
       <div class="meta">
-        <span class="publisher">{{ game.publisher.name }}</span>
-        <span class="genre">{{ game.genre.name }}</span>
+        <span class="publisher">{{ game.publisher.name }} | </span>
+        <span class="genre">{{ game.genre.name }} | </span>
         <span class="platform" ng-repeat="platform in game.platforms">{{ platform.name }}</span>
       </div>
       <div class="description">
