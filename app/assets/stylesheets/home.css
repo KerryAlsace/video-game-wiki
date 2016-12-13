@@ -4,6 +4,9 @@
   .ui.fixed.inverted.menu {
     background-color: #8C075A;
   }
+  .ui.menu .dropdown.item .menu {
+    background-color: #8C075A;
+  }
   .ui.menu .item img.logo {
     margin-right: 1.5em;
     background-color: #8C075A;
