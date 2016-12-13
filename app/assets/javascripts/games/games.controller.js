@@ -1,8 +1,13 @@
 (function() {
   'use strict';
 
-  function GamesController(GamesFactory) {
+  function GamesController($scope, GamesFactory) {
     var vm = this;
+
+    $scope.init = function(){
+      $('.ui.selection.dropdown').dropdown();
+    }
+    $scope.init()
 
     // Callable methods on the vm:
     vm.getGame = getGame;
