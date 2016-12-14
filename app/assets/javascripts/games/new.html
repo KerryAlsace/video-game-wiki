@@ -1,16 +1,16 @@
 <form class="ui form" ng-submit="vm.createGame()">
   <div class="field">
     <label>Title</label>
-    <input type="text" name="title" placeholder="Title">
+    <input type="text" name="title" placeholder="Title"ng-model="game.title">
   </div>
   <div class="field">
     <label>Description</label>
-    <textarea></textarea>
+    <textarea ng-model="game.description"></textarea>
   </div>
   <div class="field">
       <label>Publisher</label>
       <div class="ui selection dropdown">
-          <input type="hidden" name="publisher">
+          <input type="hidden" name="publisher" ng-model="game.publisher">
           <i class="dropdown icon"></i>
           <div class="default text">Publisher</div>
           <div class="menu">
@@ -21,7 +21,7 @@
   <div class="field">
       <label>Genre</label>
       <div class="ui selection dropdown">
-          <input type="hidden" name="genre">
+          <input type="hidden" name="genre" ng-model="game.genre">
           <i class="dropdown icon"></i>
           <div class="default text">Genre</div>
           <div class="menu">
