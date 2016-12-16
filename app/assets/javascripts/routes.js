@@ -23,7 +23,12 @@
         .state('home.showGame', {
           url: 'games/:id',
           templateUrl: 'games/show.html',
-          controller: 'GamesController as vm'
+          controller: 'GamesController as vm',
+          resolve: {
+            game: function($http, $stateParams) {
+              return $http.get('/games/' + $stateParams.id);
+            }
+          }
         })
         .state('home.publishers', {
           url: 'publishers',
