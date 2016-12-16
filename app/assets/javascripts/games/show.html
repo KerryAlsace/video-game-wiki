@@ -1,0 +1,7 @@
+<h1 class='ui-header'>{{ vm.game.title }}</h1>
+<p>{{ vm.game.publisher.name }}</p>
+<p>{{ vm.game.genre.name }}</p>
+<p>{{ vm.game.description }}</p>
+<div ng-repeat="platform in vm.game.platforms">
+  {{platform.name }}
+</div>

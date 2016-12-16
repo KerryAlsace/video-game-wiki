@@ -10,7 +10,6 @@
     $scope.init()
 
     // Callable methods on the vm:
-    vm.getGame = getGame;
     vm.createGame = createGame;
     vm.updateGame = updateGame;
     vm.deleteGame = deleteGame;
@@ -46,10 +45,6 @@
                         .then(setPlatforms)
     }
 
-    function getGame() {
-      
-    }
-
     function createGame() {
       console.log(vm.game)
       return GamesFactory.createGame(vm.game)
@@ -68,7 +63,7 @@
     function addGame(data) {
       return vm.games.push(data);
     }
-
+    
     function setGames(data) {
       return vm.games = data;
     }
