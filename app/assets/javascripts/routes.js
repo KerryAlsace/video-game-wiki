@@ -65,6 +65,16 @@
           templateUrl: 'platforms/platforms.html',
           controller: 'PlatformsController as vm'
         })
+        .state('home.showPlatform', {
+          url: 'platforms/:id',
+          templateUrl: 'games/games.html',
+          controller: 'PlatformController as vm',
+          resolve: {
+            platform: function($http, $stateParams) {
+              return $http.get('/platforms/' + $stateParams.id);
+            }
+          }
+        })
 
       $urlRouterProvider.otherwise('/')
     })

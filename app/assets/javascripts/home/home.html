@@ -33,8 +33,13 @@
         </div>
       </div>
     </div>
-    <div ui-sref-active="active">
-      <a href="#" class="item" ui-sref="home.platforms">Platforms</a>
+    <div class="ui simple dropdown item">
+      Platforms<i class="dropdown icon"></i>
+      <div class="menu">
+        <div ng-repeat="platform in vm.platforms" ui-sref-active="active">
+          <a href="#" class="item" ui-sref="home.showPlatform({ id: platform.id })">{{ platform.name }}</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
