@@ -23,7 +23,7 @@
         .state('home.showGame', {
           url: 'games/:id',
           templateUrl: 'games/show.html',
-          controller: 'GamesController as vm',
+          controller: 'GameController as vm',
           resolve: {
             game: function($http, $stateParams) {
               return $http.get('/games/' + $stateParams.id);
