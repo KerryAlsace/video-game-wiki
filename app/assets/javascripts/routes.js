@@ -8,7 +8,7 @@
         .state('home', {
           url: '/',
           templateUrl: 'home/home.html',
-          controller: 'HomeController as vm'
+          controller: 'GamesController as vm'
         })
         .state('home.games', {
           url: 'games',
@@ -34,6 +34,16 @@
           url: 'publishers',
           templateUrl: 'publishers/publishers.html',
           controller: 'PublishersController as vm'
+        })
+        .state('home.showPublisher', {
+          url: 'publishers/:id',
+          templateUrl: 'games/games.html',
+          controller: 'PublisherController as vm',
+          resolve: {
+            publisher: function($http, $stateParams) {
+              return $http.get('/publishers/' + $stateParams.id);
+            }
+          }
         })
         .state('home.genres', {
           url: 'genres',

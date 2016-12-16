@@ -1,0 +1,10 @@
+<h1 class='ui-header'>Genres</h1>
+<div class="ui divided items">
+  <div class="item" ng-repeat="genre in vm.genres track by genre.id">
+    <div class="content">
+      <div class="ui header">
+        <a href="#" ui-sref="home.showGenre({ id: genre.id })">{{ genre.name }}</a>
+      </div>
+    </div>
+  </div>
+</div>

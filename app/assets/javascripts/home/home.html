@@ -17,6 +17,14 @@
         </div>
       </div>
     </div>
+    <div class="ui simple dropdown item">
+      Publishers<i class="dropdown icon"></i>
+      <div class="menu">
+        <div ng-repeat="publisher in vm.publishers" ui-sref-active="active">
+          <a href="#" class="item" ui-sref="home.showPublisher({ id: publisher.id })">{{ publisher.name }}</a>
+        </div>
+      </div>
+    </div>
     <div ui-sref-active="active">
       <a href="#" class="item" ui-sref="home.publishers">Publishers</a>
     </div>
