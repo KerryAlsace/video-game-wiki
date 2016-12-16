@@ -11,8 +11,8 @@ class GamesController < ApplicationController
   end
 
   def create
-    game = Game.new(game_params)
-    if game.save
+    game = Game.new
+    if game.save(game_params)
       render json: { status: 'ok' }
     else
       render json: { errors: game.errors.full_messages }, status: :unprocessable_entitiy

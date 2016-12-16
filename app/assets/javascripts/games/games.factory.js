@@ -42,17 +42,20 @@
 
     }
 
-    function createGame(content) {
+    function createGame(game) {
       var req = {
         method: 'POST',
         url: '/games',
         headers: {
-          'Content-Type': undefined
+          'Content-Type': 'application/json'
         },
-        data: { content }
+        data: {
+          game: game
+        }
       }
 
       return $http(req)
+              .catch(handleError)
     }
 
     function updateGame() {
