@@ -53,7 +53,7 @@
     function createGame() {
       console.log(vm.game)
       return GamesFactory.createGame(vm.game)
-                        .then(getGames)
+                        .then(addGame)
       
     }
 
@@ -65,9 +65,9 @@
       
     }
 
-    // function addGame(data) {
-    //   return vm.games.push(data);
-    // }
+    function addGame(data) {
+      return vm.games.push(data);
+    }
 
     function setGames(data) {
       return vm.games = data;

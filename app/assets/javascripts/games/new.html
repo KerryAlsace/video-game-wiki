@@ -8,26 +8,22 @@
     <textarea ng-model="vm.game.description"></textarea>
   </div>
   <div class="field">
-      <label>Publisher</label>
-      <div class="ui selection dropdown">
-          <input type="hidden" name="publisher" ng-model="vm.game.publisher">
-          <i class="dropdown icon"></i>
-          <div class="default text">Publisher</div>
-          <div class="menu">
-              <div ng-repeat="publisher in vm.publishers track by publisher.id" class="item" data-value="{{$index}}">{{ publisher.name }}</div>
-          </div>
-      </div>
+    <label for="publisher">Publisher</label>
+    <select name="publisher" id="publisher" ng-model="vm.game.publisher_id">
+      <option ng-repeat="publisher in vm.publishers" value="{{ publisher.id }}">{{ publisher.name }}</option>
+    </select>
   </div>
   <div class="field">
-      <label>Genre</label>
-      <div class="ui selection dropdown">
-          <input type="hidden" name="genre" ng-model="vm.game.genre">
-          <i class="dropdown icon"></i>
-          <div class="default text">Genre</div>
-          <div class="menu">
-              <div ng-repeat="genre in vm.genres track by genre.id" class="item" data-value="{{$index}}">{{ genre.name }}</div>
-          </div>
-      </div>
+    <label for="genre">Genre</label>
+    <select name="genre" id="genre" ng-model="vm.game.genre_id">
+      <option ng-repeat="genre in vm.genres" value="{{ genre.id }}">{{ genre.name }}</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="platform">platform</label>
+    <select name="platform" id="platform" ng-model="vm.game.platform_id">
+      <option ng-repeat="platform in vm.platforms" value="{{ platform.id }}">{{ platform.name }}</option>
+    </select>
   </div>
   <button class="ui button" type="submit">Submit</button>
 </form>
