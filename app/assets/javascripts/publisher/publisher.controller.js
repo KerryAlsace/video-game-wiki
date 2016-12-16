@@ -9,8 +9,6 @@
     // Instantiated info:
     activate();
 
-    vm.games = $filter('filter')(vm.allGames, {publisher: vm.publisher});
-
     // Defined methods:
     function activate() {
       getGames()
@@ -40,7 +38,9 @@
     }
     
     function setGames(data) {
-      return vm.allGames = data;
+      return vm.games = data.filter(function(game) {
+        return (game.publisher_id == vm.publisher.id)
+      });
     }
 
     function setPublishers(data) {

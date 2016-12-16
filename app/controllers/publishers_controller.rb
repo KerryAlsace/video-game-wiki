@@ -7,6 +7,7 @@ class PublishersController < ApplicationController
 
   def show
     publisher = Publisher.find(params[:id])
+    games = Game.all
     render json: publisher
   end
 
