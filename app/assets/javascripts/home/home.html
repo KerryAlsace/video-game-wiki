@@ -25,11 +25,13 @@
         </div>
       </div>
     </div>
-    <div ui-sref-active="active">
-      <a href="#" class="item" ui-sref="home.publishers">Publishers</a>
-    </div>
-    <div ui-sref-active="active">
-      <a href="#" class="item" ui-sref="home.genres">Genres</a>
+    <div class="ui simple dropdown item">
+      Genres<i class="dropdown icon"></i>
+      <div class="menu">
+        <div ng-repeat="genre in vm.genres" ui-sref-active="active">
+          <a href="#" class="item" ui-sref="home.showGenre({ id: genre.id })">{{ genre.name }}</a>
+        </div>
+      </div>
     </div>
     <div ui-sref-active="active">
       <a href="#" class="item" ui-sref="home.platforms">Platforms</a>

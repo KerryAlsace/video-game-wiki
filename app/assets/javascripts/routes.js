@@ -49,7 +49,18 @@
           url: 'genres',
           templateUrl: 'genres/genres.html',
           controller: 'GenresController as vm'
-        }).state('home.platforms', {
+        })
+        .state('home.showGenre', {
+          url: 'genres/:id',
+          templateUrl: 'games/games.html',
+          controller: 'GenreController as vm',
+          resolve: {
+            genre: function($http, $stateParams) {
+              return $http.get('/genres/' + $stateParams.id);
+            }
+          }
+        })
+        .state('home.platforms', {
           url: 'platforms',
           templateUrl: 'platforms/platforms.html',
           controller: 'PlatformsController as vm'
