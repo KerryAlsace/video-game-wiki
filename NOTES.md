@@ -185,3 +185,20 @@ Pull in video games, studios/companies, genres from API
       playing to forget
       making new friends
       making new enemies
+
+
+
+
+
+
+
+// Section of new game form using semantic-ui (didn't work)
+<!-- <label>Publisher</label>
+      <div class="ui selection dropdown">
+          <input type="hidden" name="publisher" ng-model="vm.game.publisher">
+          <i class="dropdown icon"></i>
+          <div class="default text">Publisher</div>
+          <div class="menu">
+              <div ng-repeat="publisher in vm.publishers track by publisher.id" value="{{publisher.id}}" class="item" data-value="{{$index}}">{{ publisher.name }}</div>
+          </div>
+      </div> -->
