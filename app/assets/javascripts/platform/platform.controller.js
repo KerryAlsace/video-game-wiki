@@ -5,6 +5,7 @@
     var vm = this;
 
     vm.platform = platform.data;
+    vm.header = vm.platform.name;
 
     // Instantiated info:
     activate();

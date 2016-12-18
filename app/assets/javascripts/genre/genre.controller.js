@@ -5,6 +5,7 @@
     var vm = this;
 
     vm.genre = genre.data;
+    vm.header = vm.genre.name;
 
     // Instantiated info:
     activate();

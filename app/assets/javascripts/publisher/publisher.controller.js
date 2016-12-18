@@ -5,6 +5,7 @@
     var vm = this;
 
     vm.publisher = publisher.data;
+    vm.header = vm.publisher.name;
 
     // Instantiated info:
     activate();

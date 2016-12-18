@@ -4,6 +4,8 @@
   function GamesController($scope, GamesFactory) {
     var vm = this;
 
+    vm.header = 'Games';
+
     $scope.init = function(){
       $('.ui.selection.dropdown').dropdown();
     }
