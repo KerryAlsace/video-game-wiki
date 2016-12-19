@@ -21,6 +21,7 @@ body {
   margin-top: 2em;
 }
 .ui.footer.segment {
+  text-align: center;
   background-color: #8C075A;
   margin: 5em 0em 0em;
   padding: 5em 0em;
