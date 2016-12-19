@@ -27,5 +27,8 @@ body {
   padding: 5em 0em;
 }
 a {
-  color: white;
+  color: #9BD317;
+}
+a:hover {
+  color: #79A908;
 }
