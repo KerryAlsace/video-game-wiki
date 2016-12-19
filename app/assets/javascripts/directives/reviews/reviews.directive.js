@@ -19,8 +19,10 @@
  
   function reviews() {
     return {
-      template: 'reviews/reviews.html',
-      scope: {},
+      template: 'directives/reviews/reviews.html',
+      scope: {
+        review: '@'
+      },
       transclude: true,
       controller: 'ReviewsController as vm',
       restrict: 'E'
