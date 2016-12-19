@@ -14,12 +14,14 @@ body {
 .main.container {
   margin-top: 4em;
 }
+.ui.huge.primary.button {
+  background-color: #8C075A;
+}
 .wireframe {
   margin-top: 2em;
 }
 .ui.footer.segment {
   background-color: #8C075A;
-  margin: 2em 0em 0em;
-  padding: 2em 0em;
-  text-align: center;
+  margin: 5em 0em 0em;
+  padding: 5em 0em;
 }
