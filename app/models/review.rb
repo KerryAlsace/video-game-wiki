@@ -1,6 +1,7 @@
 class Review < ApplicationRecord
   belongs_to :game
-  has_and_belongs_to_many :goodfors
+  has_many :review_goodfors
+  has_many :goodfors, through: :review_goodfors
 
   attr_reader :goodfor_ids
 

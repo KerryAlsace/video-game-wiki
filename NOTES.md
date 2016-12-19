@@ -82,6 +82,7 @@ Initial setup:
 - `rails g model Platform name:string`
 - `rails g model PlatformGames game_id:integer platform_id:integer`
 - `rails g model Goodfors activity:string`
+- `rails g model ReviewGoodfors review_id:integer goodfor_id:integer`
 - add to routes.rb
   root 'application#index'
 

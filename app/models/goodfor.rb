@@ -1,3 +1,4 @@
 class Goodfor < ApplicationRecord
-  has_and_belongs_to_many :reviews
+  has_many :review_goodfors
+  has_many :reviews, through: :review_goodfors
 end
