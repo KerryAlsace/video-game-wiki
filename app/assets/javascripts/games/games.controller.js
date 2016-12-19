@@ -67,11 +67,9 @@
 
     function addPlatform(platform_id) {
       return vm.checkedPlatforms.push(platform_id);
-      // return vm.games.platform_ids.push(platform_id);
     }
 
     function addGame(data) {
-      console.log(data);
       return vm.games.push(data);
     }
     
