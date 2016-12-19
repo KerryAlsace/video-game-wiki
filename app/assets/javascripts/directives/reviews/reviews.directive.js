@@ -1,16 +1,16 @@
 (function() {
   'use strict';
 
-  function ReviewsController($scope, GamesFactory) {
+  function ReviewsController() {
     var vm = this;
 
-    vm.reviews = [];
+    // vm.reviews = [];
 
-    vm.addReview = addReview;
+    // vm.addReview = addReview;
 
-    function addReview(review) {
-      vm.reviews.push(review);
-    }
+    // function addReview(review) {
+    //   vm.reviews.push(review);
+    // }
   }
      
   angular

@@ -1,4 +1,4 @@
-class GoodforController < ApplicationController
+class GoodforsController < ApplicationController
 
   def index
     goodfors = Goodfor.all
