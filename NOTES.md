@@ -94,6 +94,7 @@ Initial setup:
 - edit application_controller.rb
 - add to routes.rb?
 - `rails g controller Games`
+- `rails g controller Goodfor`
 - delete games.coffee and games.scss
 - fill out games_controller.rb
 - create views/application/index.html.erb and add
