@@ -81,6 +81,7 @@ Initial setup:
 - `rails g model Genre name:string`
 - `rails g model Platform name:string`
 - `rails g model PlatformGames game_id:integer platform_id:integer`
+- `rails g model Goodfors activity:string`
 - add to routes.rb
   root 'application#index'
 

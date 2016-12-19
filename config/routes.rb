@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :publishers
   resources :genres
   resources :platforms
+  resources :goodfors
 
 end
