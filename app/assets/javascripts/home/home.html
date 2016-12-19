@@ -45,6 +45,9 @@
 </div>
 
 <div class='ui main text container'>
+  <div ng-if="'home' | isState">
+    This is home
+  </div>
   <ui-view></ui-view>
 </div>
 
