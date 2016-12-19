@@ -27,6 +27,7 @@
       getPublishers()
       getGenres()
       getPlatforms()
+      getGoodfors()
     }
 
     function getGames() {
@@ -47,6 +48,11 @@
     function getPlatforms() {
       return GamesFactory.getPlatforms()
                         .then(setPlatforms)
+    }
+
+    function getGoodfors() {
+      return GamesFactory.getGoodfors()
+                        .then(setGoodfors)
     }
 
     function createGame() {
@@ -88,6 +94,10 @@
 
     function setPlatforms(data) {
       return vm.platforms = data;
+    }
+
+    function setGoodfors(data) {
+      return vm.goodfors = data;
     }
 
   }

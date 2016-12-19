@@ -8,6 +8,7 @@
       getPublishers: getPublishers,
       getGenres: getGenres,
       getPlatforms: getPlatforms,
+      getGoodfors: getGoodfors,
       getGame: getGame,
       createGame: createGame,
       updateGame: updateGame,
@@ -34,6 +35,12 @@
 
     function getPlatforms() {
       return $http.get('/platforms')
+                  .then(handleResponse)
+                  .catch(handleError)
+    }
+
+    function getGoodfors() {
+      return $http.get('/goodfors')
                   .then(handleResponse)
                   .catch(handleError)
     }
