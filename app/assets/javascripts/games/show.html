@@ -1,7 +1,17 @@
-<h1 class='ui-header'>{{ vm.game.title }}</h1>
-<p>{{ vm.game.publisher.name }}</p>
-<p>{{ vm.game.genre.name }}</p>
-<p>{{ vm.game.description }}</p>
-<div ng-repeat="platform in vm.game.platforms">
-  {{platform.name }}
+<h1 class="ui block header">{{ vm.game.title }}</h1>
+<div class="ui raised segment">
+  <div class="ui divided items">
+    <div class="item">
+      <div class="content">
+        <p><a href="#" ui-sref="home.showPublisher({ id: vm.game.publisher.id })">{{ vm.game.publisher.name }}</a></p>
+        <p><a href="#" ui-sref="home.showGenre({ id: vm.game.genre.id })">{{ vm.game.genre.name }}</a></p>
+        <p>{{ vm.game.description }}</p>
+        <div class="extra">
+          <div ng-repeat="platform in vm.game.platforms">
+            <a href="#" ui-sref="home.showPlatform({ id: platform.id })">{{ platform.name }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
