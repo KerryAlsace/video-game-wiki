@@ -10,12 +10,15 @@
       require: '^reviews',
       transclude: true,
       controller: 'ReviewsController as vm',
-      template: 'review.html'
+      template: 'reviews/review.html',
+      link: function ($scope, $element, $attrs, $ctrl) {
+        
+      }
     };
   }
 
   angular
-    .module('app', [])
+    .module('app')
     .directive('review', review)
     .directive('reviews', reviews);
     
