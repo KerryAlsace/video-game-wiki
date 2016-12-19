@@ -20,10 +20,17 @@
     </select>
   </div>
   <div class="field">
-    <label for="platform">platform</label>
+    <label for="platforms">Platforms</label>
+    <div ng-repeat="platform in vm.platforms">
+      <label>{{ platform.name }}</label>
+      <input type="checkbox" ng-click="vm.addPlatform(platform.id)">
+    </div>
+  </div>
+  <!-- <div class="field">
+    <label for="platform">Platforms</label>
     <select name="platform" id="platform" ng-model="vm.game.platform_id">
       <option ng-repeat="platform in vm.platforms" value="{{ platform.id }}">{{ platform.name }}</option>
     </select>
-  </div>
+  </div> -->
   <button class="ui button" type="submit">Submit</button>
 </form>

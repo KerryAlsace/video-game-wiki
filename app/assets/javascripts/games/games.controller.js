@@ -4,6 +4,8 @@
   function GamesController($scope, GamesFactory) {
     var vm = this;
 
+    vm.checkedPlatforms = [];
+
     $scope.init = function(){
       $('.ui.selection.dropdown').dropdown();
     }
@@ -13,6 +15,7 @@
     vm.createGame = createGame;
     vm.updateGame = updateGame;
     vm.deleteGame = deleteGame;
+    vm.addPlatform = addPlatform;
 
     // Instantiated info:
     activate();
@@ -46,10 +49,12 @@
     }
 
     function createGame() {
-      console.log(vm.game)
+      vm.game.platform_ids = [];
+      vm.checkedPlatforms.forEach(function(platform_id) {
+        vm.game.platform_ids.push(platform_id)
+      })
       return GamesFactory.createGame(vm.game)
                         .then(addGame)
-      
     }
 
     function updateGame() {
@@ -60,7 +65,13 @@
       
     }
 
+    function addPlatform(platform_id) {
+      return vm.checkedPlatforms.push(platform_id);
+      // return vm.games.platform_ids.push(platform_id);
+    }
+
     function addGame(data) {
+      console.log(data);
       return vm.games.push(data);
     }
     
