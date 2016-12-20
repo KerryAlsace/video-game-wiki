@@ -81,7 +81,6 @@
     }
     
     function setGames(data) {
-      console.log(data)
       return vm.games = data;
     }
 

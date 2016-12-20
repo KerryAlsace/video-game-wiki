@@ -22,7 +22,7 @@
       templateUrl: 'directives/reviews/reviews.html',
       scope: {},
       transclude: true,
-      controller: 'GamesController as vm',
+      controller: 'ReviewsController as vm',
       restrict: 'E',
       // bindToController: {
       //   review: '='
