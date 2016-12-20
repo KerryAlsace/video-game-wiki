@@ -5,6 +5,12 @@
     var vm = this;
 
     vm.game = game.data;
+
+    activate();
+
+    function activate() {
+      console.log(vm.game);
+    }
   }
 
   angular
