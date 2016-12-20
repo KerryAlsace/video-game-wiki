@@ -30,6 +30,16 @@
             }
           }
         })
+        .state('home.reviews', {
+          url: 'games/:id/reviews',
+          templateUrl: 'directives/reviews/reviews.html',
+          controller: 'ReviewsController as vm',
+          resolve: {
+            reviews: function($http, $stateParams) {
+              return $http.get('/games/' + $stateParams.id + '/reviews');
+            }
+          }
+        })
         .state('home.publishers', {
           url: 'publishers',
           templateUrl: 'publishers/publishers.html',

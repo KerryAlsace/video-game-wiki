@@ -1,8 +1,16 @@
 (function() {
   'use strict';
 
-  function ReviewsController() {
+  function ReviewsController(reviews) {
     var vm = this;
+
+    vm.reviews = reviews.data;
+
+    activate();
+
+    function activate() {
+      console.log(vm.reviews);
+    }
 
     // vm.reviews = [];
 
@@ -17,13 +25,13 @@
     .module('app')
     .controller('ReviewsController', ReviewsController);
  
-  function reviews() {
+  function Reviews() {
     return {
       templateUrl: 'directives/reviews/reviews.html',
       scope: {},
       transclude: true,
       controller: 'ReviewsController as vm',
-      restrict: 'E',
+      restrict: 'E'
       // bindToController: {
       //   review: '='
       // }
@@ -32,6 +40,6 @@
  
   angular
     .module('app')
-    .directive('reviews', reviews);
+    .directive('reviews', Reviews);
     
 }());
