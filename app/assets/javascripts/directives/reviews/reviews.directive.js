@@ -19,14 +19,14 @@
  
   function reviews() {
     return {
-      template: 'directives/reviews/reviews.html',
+      templateUrl: 'directives/reviews/reviews.html',
       scope: {},
       transclude: true,
-      controller: 'ReviewsController as vm',
+      controller: 'GamesController as vm',
       restrict: 'E',
-      bindToController: {
-        review: '='
-      }
+      // bindToController: {
+      //   review: '='
+      // }
     };
   }
  
