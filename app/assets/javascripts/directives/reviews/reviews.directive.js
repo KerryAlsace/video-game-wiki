@@ -20,12 +20,13 @@
   function reviews() {
     return {
       template: 'directives/reviews/reviews.html',
-      scope: {
-        review: '@'
-      },
+      scope: {},
       transclude: true,
       controller: 'ReviewsController as vm',
-      restrict: 'E'
+      restrict: 'E',
+      bindToController: {
+        review: '='
+      }
     };
   }
  
