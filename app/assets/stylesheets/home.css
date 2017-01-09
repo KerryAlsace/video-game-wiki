@@ -26,3 +26,9 @@ body {
   margin: 5em 0em 0em;
   padding: 5em 0em;
 }
+a {
+  color: #9BD317;
+}
+a:hover {
+  color: #79A908;
+}
