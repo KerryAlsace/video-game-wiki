@@ -45,6 +45,8 @@ group :development, :test do
   gem 'byebug', platform: :mri
   # Use pry for debugging
   gem 'pry'
+  # Use faker for creating seed data
+  gem 'faker'
 end
 
 group :development do
