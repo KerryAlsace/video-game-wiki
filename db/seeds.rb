@@ -37,3 +37,12 @@ require 'faker'
   r = Review.create(content: "#{Faker::TwinPeaks.quote}", game: gm)
   gf = Goodfor.create(activity: "#{Faker::Superhero.power}")
 end
+
+5.times do |i|
+  n = i + 1
+  Goodfor.find(n).reviews << Review.find(n)
+  if n - 1 > 0 && n + 1 < 6
+    r = n + 1
+    Goodfor.find(r).reviews << Review.find(r)
+  end
+end
