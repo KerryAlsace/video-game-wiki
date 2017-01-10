@@ -15,11 +15,6 @@
           templateUrl: 'games/games.html',
           controller: 'GamesController as vm'
         })
-        .state('home.search', {
-          url: 'games',
-          templateUrl: 'games/games.html',
-          controller: 'HomeController as vm'
-        })
         .state('home.newGame', {
           url: 'games/new',
           templateUrl: 'games/new.html',
