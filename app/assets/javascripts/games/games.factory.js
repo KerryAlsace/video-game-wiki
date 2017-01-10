@@ -11,6 +11,7 @@
       getGoodfors: getGoodfors,
       getGame: getGame,
       createGame: createGame,
+      createReview: createReview,
       updateGame: updateGame,
       deleteGame: deleteGame
     }
@@ -65,6 +66,23 @@
               .then(function(response) {
                 $location.path('/games')
               })
+              .catch(handleError)
+    }
+
+    function createReview(review) {
+      var req = {
+        method: 'POST',
+        url: '/reviews',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        data: {
+          review: review
+        }
+      }
+
+      return $http(req)
+              .then(handleResponse)
               .catch(handleError)
     }
 

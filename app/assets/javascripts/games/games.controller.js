@@ -65,11 +65,11 @@
     }
 
     function updateGame() {
-      
+
     }
 
     function deleteGame() {
-      
+
     }
 
     function addPlatform(platform_id) {
@@ -79,7 +79,7 @@
     function addGame(data) {
       return vm.games.push(data);
     }
-    
+
     function setGames(data) {
       return vm.games = data;
     }
@@ -96,14 +96,10 @@
       return vm.platforms = data;
     }
 
-    function setGoodfors(data) {
-      return vm.goodfors = data;
-    }
-
   }
 
   angular
     .module('app')
     .controller('GamesController', GamesController)
-    
+
 }());
