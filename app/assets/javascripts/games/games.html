@@ -1,6 +1,12 @@
 <h1 class='ui-header'>{{ vm.header }}</h1>
+
+<div class="ui icon input">
+  <input type="text" placeholder="Search..." ng-model="vm.searchGames">
+  <i class="search icon"></i>
+</div>
+
 <div class="ui divided items">
-  <div class="item" ng-repeat="game in vm.games track by game.id">
+  <div class="item" ng-repeat="game in vm.games track by game.id | filter:vm.searchGames">
     <div class="content">
       <div class="ui header">
         <a href="#" ui-sref="home.showGame({ id: game.id })">{{ game.title }}</a>
