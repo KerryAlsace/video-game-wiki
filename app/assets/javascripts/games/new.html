@@ -1,36 +1,69 @@
-<form class="ui form" ng-submit="vm.createGame()">
+<form class="ui form" name="form" ng-submit="vm.createGame()">
   <div class="field">
     <label>Title</label>
-    <input type="text" name="title" placeholder="Title"ng-model="vm.game.title">
+    <input
+        type="text"
+        name="title"
+        placeholder="Title"
+        required="required"
+        ng-model="vm.game.title">
+    <div>
+        <div class="error" ng-if="form.title.$touched && form.title.$error.required">
+            Title is required!
+        </div>
+    </div>
   </div>
+
   <div class="field">
     <label>Description</label>
-    <textarea ng-model="vm.game.description"></textarea>
+    <textarea
+        name="description"
+        required="required"
+        maxlength="200"
+        ng-model="vm.game.description"></textarea>
+    <div>
+        <div class="error" ng-if="form.description.$touched && form.description.$error.required">
+            Description is required!
+        </div>
+        <div class="error" ng-if="form.description.$touched &&  form.description.$error.maxlength">
+            Description can't be more than 200 characters
+        </div>
+    </div>
   </div>
+
   <div class="field">
     <label for="publisher">Publisher</label>
-    <select name="publisher" id="publisher" ng-model="vm.game.publisher_id">
-      <option ng-repeat="publisher in vm.publishers" value="{{ publisher.id }}">{{ publisher.name }}</option>
+    <select
+        name="publisher"
+        id="publisher"
+        ng-model="vm.game.publisher_id">
+      <option
+          ng-repeat="publisher in vm.publishers"
+          value="{{ publisher.id }}">{{ publisher.name }}</option>
     </select>
   </div>
+
   <div class="field">
     <label for="genre">Genre</label>
-    <select name="genre" id="genre" ng-model="vm.game.genre_id">
-      <option ng-repeat="genre in vm.genres" value="{{ genre.id }}">{{ genre.name }}</option>
+    <select
+        name="genre"
+        id="genre"
+        ng-model="vm.game.genre_id">
+      <option
+          ng-repeat="genre in vm.genres"
+          value="{{ genre.id }}">{{ genre.name }}</option>
     </select>
   </div>
+
   <div class="field">
     <label for="platforms">Platforms</label>
     <div ng-repeat="platform in vm.platforms">
       <label>{{ platform.name }}</label>
-      <input type="checkbox" ng-click="vm.addPlatform(platform.id)">
+      <input
+          type="checkbox"
+          ng-click="vm.addPlatform(platform.id)">
     </div>
   </div>
-  <!-- <div class="field">
-    <label for="platform">Platforms</label>
-    <select name="platform" id="platform" ng-model="vm.game.platform_id">
-      <option ng-repeat="platform in vm.platforms" value="{{ platform.id }}">{{ platform.name }}</option>
-    </select>
-  </div> -->
+
   <button class="ui button" type="submit">Submit</button>
 </form>

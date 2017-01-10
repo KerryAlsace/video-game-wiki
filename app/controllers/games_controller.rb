@@ -18,6 +18,7 @@ class GamesController < ApplicationController
     game.genre = Genre.find(params[:game][:genre_id].to_i)
     platform_ids = params[:game][:platform_ids]
     platform_ids.each do |platform_id|
+      # PlatformGame.create(game_id: game.id, platform_id: platform_id)
       platform = Platform.find(platform_id)
       game.platforms << platform
     end

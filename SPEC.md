@@ -9,6 +9,7 @@ Specs:
 - [x] Links should work correctly. Ex: Clicking on a product in a list, should take you to the show page for that product
   Links use ui-sref and direct the user to the correct place
 - [ ] Data should be validated in Angular before submission
+  The new game form uses Angular validations before submitting
 - [x] Must talk to the Rails backend using $http and Services
   Uses $http and a GamesFactory for communicating with Rails backend
 - [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
