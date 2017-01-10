@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  function GamesFactory($http) {
+  function GamesFactory($http, $location) {
 
     return {
       getGames: getGames,
@@ -62,6 +62,9 @@
       }
 
       return $http(req)
+              .then(function(response) {
+                $location.path('/games')
+              })
               .catch(handleError)
     }
 
@@ -70,7 +73,7 @@
     }
 
     function deleteGame() {
-      
+
     }
 
     function handleResponse(response) {
@@ -86,5 +89,5 @@
   angular
     .module('app')
     .factory('GamesFactory', GamesFactory)
-    
+
 }());
