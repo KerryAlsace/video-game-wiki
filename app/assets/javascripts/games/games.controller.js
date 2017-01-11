@@ -96,6 +96,10 @@
       return vm.platforms = data;
     }
 
+    function setGoodfors(data) {
+      return vm.goodfors = data;
+    }
+
   }
 
   angular

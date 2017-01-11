@@ -5,7 +5,7 @@
     return {
       templateUrl: 'directives/reviews/create-review.html',
       transclude: true,
-      controller: GamesController,
+      controller: 'GameController as vm',
       restrict: 'E'
     };
   }

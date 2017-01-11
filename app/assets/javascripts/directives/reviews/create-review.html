@@ -1,0 +1,21 @@
+<form class="ui form" name="form" ng-submit="vm.createReview()">
+
+  <div class="field">
+    <label>Review</label>
+    <textarea
+        name="content"
+        ng-model="vm.review.content"></textarea>
+  </div>
+
+  <div class="field">
+    <label for="goodfors">Platforms</label>
+    <div ng-repeat="goodfor in vm.goodfors">
+      <label>{{ goodfor.name }}</label>
+      <input
+          type="checkbox"
+          ng-click="vm.addGoodfor(goodfor.id)">
+    </div>
+  </div>
+
+  <button class="ui button" type="submit">Submit</button>
+</form>
