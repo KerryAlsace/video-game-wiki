@@ -69,10 +69,11 @@
               .catch(handleError)
     }
 
-    function createReview(review) {
+    function createReview(review, game_id) {
+      var url = `/games/${game_id}/reviews`
       var req = {
         method: 'POST',
-        url: '/reviews',
+        url: url,
         headers: {
           'Content-Type': 'application/json'
         },

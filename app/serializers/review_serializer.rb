@@ -1,5 +1,5 @@
 class ReviewSerializer < ActiveModel::Serializer
-  attributes :id, :content, :game_id, :goodfors
+  attributes :id, :content, :game_id, :goodfor_ids, :goodfors
 
   has_one :game
   has_many :review_goodfors

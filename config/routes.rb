@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'application#index'
 
   resources :games do
-    :reviews
+    resources :reviews
   end
 
   resources :publishers

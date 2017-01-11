@@ -5,6 +5,7 @@
     var vm = this;
 
     vm.game = game.data;
+    vm.checkedGoodfors = [];
 
     // Callable methods on the vm:
     vm.createReview = createReview;
@@ -28,7 +29,8 @@
       vm.checkedGoodfors.forEach(function(goodfor_ids) {
         vm.review.goodfor_ids.push(goodfor_id)
       })
-      return GamesFactory.createReview(vm.review)
+      console.log(vm.review.goodfor_ids)
+      return GamesFactory.createReview(vm.review, vm.game.id)
                         .then(addReview)
     }
 
@@ -41,7 +43,6 @@
     }
 
     function setGoodfors(data) {
-      console.log(data);
       return vm.goodfors = data;
     }
 

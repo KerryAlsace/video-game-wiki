@@ -12,7 +12,6 @@
             <label for="goodfors">This Game is Good For: </label>
             <div ng-repeat="goodfor in vm.goodfors">
               <input
-                  name="goodfor"
                   type="checkbox"
                   ng-click="vm.addGoodfor(goodfor.id)">
               <label for="goodfor">{{ goodfor.activity }}</label>

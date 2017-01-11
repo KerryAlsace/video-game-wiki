@@ -7,15 +7,19 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    binding.pry
-    # check for params[:id]
-    game = Game.find(params[:id])
+    game = Game.find(params[:game_id].to_i)
     review = game.reviews.build
     review.content = params[:review][:content]
-    goodfors = params[:review][:goodfor_ids]
+    goodfor_ids = params[:review][:goodfor_ids]
     goodfor_ids.each do |goodfor_id|
       goodfor = Goodfor.find(goodfor_id)
       review.goodfors << goodfor
+    end
+
+    if review.save
+      render json: { status: 'ok' }
+    else
+      render json: { errors: review.errors.full_messages }, status: :unprocessable_entitiy
     end
   end
 
