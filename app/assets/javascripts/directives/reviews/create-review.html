@@ -1,21 +1,46 @@
-<form class="ui form" name="form" ng-submit="vm.createReview()">
+  <div class="ui divided items">
+    <div class="item">
+      <div class="content">
+        <form class="ui form" name="form" ng-submit="vm.createReview()">
+          <div class="field">
+            <label>Review</label>
+            <textarea
+                name="content"
+                ng-model="vm.review.content"></textarea>
+          </div>
+          <div class="field">
+            <label for="goodfors">This Game is Good For: </label>
+            <div ng-repeat="goodfor in vm.goodfors">
+              <input
+                  name="goodfor"
+                  type="checkbox"
+                  ng-click="vm.addGoodfor(goodfor.id)">
+              <label for="goodfor">{{ goodfor.activity }}</label>
+            </div>
+          </div>
+          <button class="ui button" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
+<!-- <form class="ui form" name="form" ng-submit="vm.createReview()">
+  <h3 class="ui block header">Add a Review</h3>
   <div class="field">
     <label>Review</label>
     <textarea
         name="content"
         ng-model="vm.review.content"></textarea>
   </div>
-
   <div class="field">
-    <label for="goodfors">Platforms</label>
+    <label for="goodfors">This Game is Good For: </label>
     <div ng-repeat="goodfor in vm.goodfors">
-      <label>{{ goodfor.name }}</label>
       <input
+          name="goodfor"
           type="checkbox"
           ng-click="vm.addGoodfor(goodfor.id)">
+      <label for="goodfor">{{ goodfor.activity }}</label>
     </div>
   </div>
-
   <button class="ui button" type="submit">Submit</button>
-</form>
+</form> -->

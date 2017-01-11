@@ -16,7 +16,6 @@
     // Defined methods:
     function activate() {
       getGoodfors()
-      console.log(vm.game);
     }
 
     function getGoodfors() {
@@ -42,6 +41,7 @@
     }
 
     function setGoodfors(data) {
+      console.log(data);
       return vm.goodfors = data;
     }
 
