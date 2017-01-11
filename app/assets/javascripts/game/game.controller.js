@@ -10,6 +10,7 @@
     // Callable methods on the vm:
     vm.createReview = createReview;
     vm.addReview = addReview;
+    vm.addGoodfor = addGoodfor;
 
     // Instantiated info:
     activate();
@@ -26,7 +27,7 @@
 
     function createReview() {
       vm.review.goodfor_ids = [];
-      vm.checkedGoodfors.forEach(function(goodfor_ids) {
+      vm.checkedGoodfors.forEach(function(goodfor_id) {
         vm.review.goodfor_ids.push(goodfor_id)
       })
       console.log(vm.review.goodfor_ids)
