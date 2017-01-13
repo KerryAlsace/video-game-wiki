@@ -4,6 +4,7 @@ class Game < ApplicationRecord
   belongs_to :genre
   has_many :platform_games
   has_many :platforms, through: :platform_games
+  has_many :goodfors, through: :reviews
 
   attr_reader :platform_ids
 
