@@ -1,7 +1,7 @@
   <div class="ui divided items">
     <div class="item">
       <div class="content">
-        <form class="ui form" name="form" ng-submit="vm.createReview()">
+        <form class="ui form" name="vm.form" ng-submit="vm.createReview()">
           <div class="field">
             <label>Review</label>
             <textarea
@@ -13,6 +13,7 @@
             <div ng-repeat="goodfor in vm.goodfors">
               <label>{{ goodfor.activity }}</label>
               <input
+                  ng-model="goodfor.selected"
                   type="checkbox"
                   ng-click="vm.addGoodfor(goodfor.id)">
             </div>
