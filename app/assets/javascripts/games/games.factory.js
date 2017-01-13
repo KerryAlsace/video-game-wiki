@@ -9,11 +9,9 @@
       getGenres: getGenres,
       getPlatforms: getPlatforms,
       getGoodfors: getGoodfors,
-      getGame: getGame,
+      getReviews: getReviews,
       createGame: createGame,
       createReview: createReview,
-      updateGame: updateGame,
-      deleteGame: deleteGame
     }
 
     function getGames() {
@@ -46,8 +44,19 @@
                   .catch(handleError)
     }
 
-    function getGame() {
+    function getReviews() {
+      var url = `/reviews`
+      var req = {
+        method: 'GET',
+        url: url,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
 
+      return $http(req)
+                  .then(handleResponse)
+                  .catch(handleError)
     }
 
     function createGame(game) {
@@ -85,14 +94,6 @@
       return $http(req)
               .then(handleResponse)
               .catch(handleError)
-    }
-
-    function updateGame() {
-
-    }
-
-    function deleteGame() {
-
     }
 
     function handleResponse(response) {

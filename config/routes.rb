@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :platforms
   resources :goodfors
 
+  resources :reviews, only: :index
+
 end

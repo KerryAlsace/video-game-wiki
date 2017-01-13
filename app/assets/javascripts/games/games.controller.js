@@ -14,8 +14,6 @@
 
     // Callable methods on the vm:
     vm.createGame = createGame;
-    vm.updateGame = updateGame;
-    vm.deleteGame = deleteGame;
     vm.addPlatform = addPlatform;
 
     // Instantiated info:
@@ -62,14 +60,6 @@
       })
       return GamesFactory.createGame(vm.game)
                         .then(addGame)
-    }
-
-    function updateGame() {
-
-    }
-
-    function deleteGame() {
-
     }
 
     function addPlatform(platform_id) {

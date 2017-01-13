@@ -18,6 +18,7 @@
     // Defined methods:
     function activate() {
       getGoodfors()
+      getReviews()
     }
 
     function getGoodfors() {
@@ -25,18 +26,23 @@
                         .then(setGoodfors)
     }
 
+    function getReviews() {
+      return GamesFactory.getReviews()
+                        .then(setReviews)
+    }
+
     function createReview() {
       vm.review.goodfor_ids = [];
       vm.checkedGoodfors.forEach(function(goodfor_id) {
         vm.review.goodfor_ids.push(goodfor_id)
       })
-      console.log(vm.review.goodfor_ids)
       return GamesFactory.createReview(vm.review, vm.game.id)
                         .then(addReview)
     }
 
     function addReview(data) {
-      return vm.game.reviews.push(data);
+      vm.game.reviews.push(data);
+      return vm.reviews.push(data);
     }
 
     function addGoodfor(goodfor_id) {
@@ -45,6 +51,12 @@
 
     function setGoodfors(data) {
       return vm.goodfors = data;
+    }
+
+    function setReviews(data) {
+      return vm.reviews = data.filter(function(review) {
+        return (review.game_id == vm.game.id)
+      });
     }
 
   }
