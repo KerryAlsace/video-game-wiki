@@ -3,5 +3,6 @@
 $( document ).ready(function(){
 
   $('.ui.selection.dropdown').dropdown();
+  $('.ui.multiple.dropdown').dropdown();
 
 })
