@@ -15,6 +15,7 @@
     // Callable methods on the vm:
     vm.createGame = createGame;
     vm.addPlatform = addPlatform;
+    vm.filterGamesBy = filterGamesBy;
 
     // Instantiated info:
     activate();
@@ -64,6 +65,12 @@
 
     function addPlatform(platform_id) {
       return vm.checkedPlatforms.push(platform_id);
+    }
+
+    function filterGamesBy() {
+      var filterString = angular.element('input')[0].value;
+      var filterObject = filterString.split(',');
+      debugger
     }
 
     function addGame(data) {
