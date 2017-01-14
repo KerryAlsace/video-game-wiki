@@ -70,6 +70,12 @@
     function filterGamesBy() {
       var filterString = angular.element('input')[0].value;
       var filterObject = filterString.split(',');
+
+      return vm.games = vm.games.filter(function(game) {
+        for (let i = 0; i < filterObject.length; i++) {
+          game.goodfors.includes(filterObject[i])
+        }
+      })
       debugger
     }
 
