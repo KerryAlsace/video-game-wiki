@@ -9,6 +9,7 @@
 
     $scope.init = function(){
       $('.ui.selection.dropdown').dropdown();
+      $('.ui.floating.labeled.icon.dropdown.button').dropdown();
     }
     $scope.init()
 
@@ -68,15 +69,16 @@
     }
 
     function filterGamesBy() {
-      var filterString = angular.element('input')[0].value;
-      var filterObject = filterString.split(',');
+      return GamesFactory.getGames()
+                        .then(setFilteredGames)
+    }
 
-      return vm.games = vm.games.filter(function(game) {
-        for (let i = 0; i < filterObject.length; i++) {
-          game.goodfors.includes(filterObject[i])
-        }
+    function setFilteredGames(data) {
+      var goodforId = angular.element('div.item.ng-binding.ng-scope.selected')[0].dataset.value
+
+      return vm.games = data.filter(function(game) {
+        return game.goodfor_ids.includes(parseInt(goodforId))
       })
-      debugger
     }
 
     function addGame(data) {

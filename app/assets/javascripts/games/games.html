@@ -1,4 +1,4 @@
-<div class="ui multiple dropdown">
+<!-- <div class="ui multiple dropdown">
   <input id="filters" type="hidden" name="filters">
   <i class="filter icon"></i>
   <span class="text">Filter Games</span>
@@ -17,6 +17,24 @@
     Filter
   </button>
 </div>
+ -->
+<div class="ui floating labeled icon dropdown button">
+  <i class="filter icon"></i>
+  <span id="filterApplied" class="text">Filter Games By:</span>
+  <div class="menu">
+    <div class="header">
+      <i class="tags icon"></i>
+      Good For:
+    </div>
+    <div class="divider"></div>
+    <div class="item" ng-repeat="goodfor in vm.goodfors" data-value="{{ goodfor.id }}">
+      {{ goodfor.activity }}
+    </div>
+  </div>
+</div>
+<button class="ui button" ng-click="vm.filterGamesBy()">
+  Apply
+</button>
 
 <h1 class='ui-header'>{{ vm.header }}</h1>
 <div class="ui divided items">
