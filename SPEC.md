@@ -2,13 +2,15 @@
 
 Specs:
 - [x] Use Angular to build the app
-- [ ] Must contain some sort of nested views
-- [ ] Must contain some sort of searching as well as filtering based on some criteria. Ex: All items in the "fruit" category, or all tasks past due
-  Games can be filtered by platform, genre, and publisher
-- [ ] Must contain at least one page that allows for dynamic updating of a single field of a resource. Ex: Allow changing of quantity in a shopping cart
+- [x] Must contain some sort of nested views
+  All game pages are nested within the home page
+- [x] Must contain some sort of searching as well as filtering based on some criteria. Ex: All items in the "fruit" category, or all tasks past due
+  Games can be filtered by platform, genre, and publisher, things the game is good for, and search
+- [x] Must contain at least one page that allows for dynamic updating of a single field of a resource. Ex: Allow changing of quantity in a shopping cart
+  Can add a review to a game page, which dynamically updates the game reviews list
 - [x] Links should work correctly. Ex: Clicking on a product in a list, should take you to the show page for that product
   Links use ui-sref and direct the user to the correct place
-- [ ] Data should be validated in Angular before submission
+- [x] Data should be validated in Angular before submission
   The new game form uses Angular validations before submitting
 - [x] Must talk to the Rails backend using $http and Services
   Uses $http and a GamesFactory for communicating with Rails backend
