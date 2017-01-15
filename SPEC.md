@@ -14,7 +14,8 @@ Specs:
   The new game form uses Angular validations before submitting
 - [x] Must talk to the Rails backend using $http and Services
   Uses $http and a GamesFactory for communicating with Rails backend
-- [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+- [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+  Readme includes description, install info, contributor's guide, and license info
 
 Confirm
 - [x] You have a large number of small Git commits
