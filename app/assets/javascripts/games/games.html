@@ -1,44 +1,34 @@
-<!-- <div class="ui multiple dropdown">
-  <input id="filters" type="hidden" name="filters">
-  <i class="filter icon"></i>
-  <span class="text">Filter Games</span>
-  <div class="menu">
-    <div class="header">
-      <i class="tags icon"></i>
-      Good For:
-    </div>
-    <div class="scrolling menu">
-      <div class="item" ng-repeat="goodfor in vm.goodfors" data-value="{{ goodfor.id }}">
-        {{ goodfor.activity }}
+<div class="ui menu">
+  <div class="item">
+    <div class="ui floating labeled icon dropdown button">
+      <i class="filter icon"></i>
+      <span id="filterApplied" class="text">Filter Games By:</span>
+      <div class="menu">
+        <div class="header">
+          <i class="tags icon"></i>
+          Good For:
+        </div>
+        <div class="divider"></div>
+        <div class="item" ng-repeat="goodfor in vm.goodfors" data-value="{{ goodfor.id }}">
+          {{ goodfor.activity }}
+        </div>
       </div>
     </div>
+    <button class="ui button" ng-click="vm.filterGamesBy()">
+      Apply
+    </button>
   </div>
-  <button class="ui button" ng-click="vm.filterGamesBy()">
-    Filter
-  </button>
-</div>
- -->
-<div class="ui floating labeled icon dropdown button">
-  <i class="filter icon"></i>
-  <span id="filterApplied" class="text">Filter Games By:</span>
-  <div class="menu">
-    <div class="header">
-      <i class="tags icon"></i>
-      Good For:
-    </div>
-    <div class="divider"></div>
-    <div class="item" ng-repeat="goodfor in vm.goodfors" data-value="{{ goodfor.id }}">
-      {{ goodfor.activity }}
+  <div class="right item">
+    <div class="ui icon input">
+      <input type="text" placeholder="Search..." ng-model="vm.search">
+      <i class="search icon"></i>
     </div>
   </div>
 </div>
-<button class="ui button" ng-click="vm.filterGamesBy()">
-  Apply
-</button>
 
 <h1 class='ui-header'>{{ vm.header }}</h1>
 <div class="ui divided items">
-  <div class="item" ng-repeat="game in vm.games track by game.id">
+  <div class="item" ng-repeat="game in vm.games | filter: vm.search track by game.id">
     <div class="content">
       <div class="ui header">
         <a href="#" ui-sref="home.showGame({ id: game.id })">{{ game.title }}</a>
