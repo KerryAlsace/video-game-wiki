@@ -1,3 +1,7 @@
+<div id="loadingScreen" ng-hide="vm.loaded">
+  Loading...
+</div>
+
 <div class="ui menu">
   <div class="item">
     <div class="ui floating labeled icon dropdown button">
@@ -31,6 +35,8 @@
   <div class="item" ng-repeat="game in vm.games | filter: vm.search track by game.id">
     <div class="content">
       <div class="ui header">
+        <button ng-model="game.vote" ng-click="vm.upvote(game)">Upvote</button>
+        <p>{{ game.vote }}</p>
         <a href="#" ui-sref="home.showGame({ id: game.id })">{{ game.title }}</a>
       </div>
       <div class="meta">

@@ -7,6 +7,7 @@
     vm.header = 'Games';
     vm.checkedPlatforms = [];
 
+
     $scope.init = function(){
       $('.ui.selection.dropdown').dropdown();
       $('.ui.floating.labeled.icon.dropdown.button').dropdown();
@@ -17,6 +18,7 @@
     vm.createGame = createGame;
     vm.addPlatform = addPlatform;
     vm.filterGamesBy = filterGamesBy;
+    vm.upvote = upvote;
 
     // Instantiated info:
     activate();
@@ -28,6 +30,11 @@
       getGenres()
       getPlatforms()
       getGoodfors()
+      vm.loaded = false;
+    }
+
+    function upvote(game) {
+      return game.vote += 1
     }
 
     function getGames() {
@@ -82,11 +89,16 @@
     }
 
     function addGame(data) {
+
       return vm.games.push(data);
     }
 
     function setGames(data) {
-      return vm.games = data;
+      vm.games = data;
+      vm.games.forEach(function(game) {
+        game.vote = 0;
+      })
+      vm.loaded = true;
     }
 
     function setPublishers(data) {
